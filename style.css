@@ -11,23 +11,24 @@ body {
 
 body::before {
     content: "";
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh; /* Ensures it covers the full viewport height */
     background-image: url('img.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.8; 
+    opacity: 0.6; 
     z-index: -1;
 }
+
 .container {
     max-width: 60%;
     padding: 34px;
     margin: auto;
-    margin-top: 3%;
+    margin-top: 1%;
     border-radius: 10px;
 }
 
@@ -37,13 +38,14 @@ body::before {
 
 h1 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+   
 }
 
 p {
-    font-size: 22px;
+    font-size: 18px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin-bottom: 3%;
-    margin-top: 2%;
+    margin-top: 1%;
 }
 
 form {
@@ -66,9 +68,10 @@ input, textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
+    border-color: black;
     border-radius: 5px;
     outline: none;
-    margin-bottom: 2%;
+    margin-bottom: 2.5%;
     transition: border-color 0.3s;
 }
 
@@ -102,4 +105,10 @@ input:focus, textarea:focus {
     display: flex;
     justify-content: center;
     gap: 10px; 
+}
+
+.submitmsg{
+    font-size: 20px;
+    color: rgb(20, 108, 20);
+    margin: 1%;
 }
